@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f1f23;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0050FF;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.75) 60%, #00D6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #0050FF 0%, #00D6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-nav {
+    background: rgba(5, 5, 5, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(10, 10, 12, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(15, 15, 20, 0.85);
+    border-color: rgba(0, 214, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 80, 255, 0.15);
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, #0050FF 0%, #00C3FF 100%);
+    box-shadow: 0 4px 20px rgba(0, 80, 255, 0.35);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    box-shadow: 0 6px 28px rgba(0, 214, 255, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+/* Background Radial Glow */
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 80, 255, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+}
